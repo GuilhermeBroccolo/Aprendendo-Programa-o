@@ -14,11 +14,15 @@ public class exer {
         System.out.println("Digite o seu sobrenome: ");
         String sobrenome = scanner.nextLine();
         
+        System.out.println("Olá " + nome + " " + sobrenome);
+
         System.out.println("Digite a sua idade: ");
         int idade = scanner.nextInt();
         
-        System.out.println("Olá " + nome + " " + sobrenome);
-        
+        if (idade < 0) {
+            System.out.println("Idade inválida!");
+            return;
+        }
         if (idade >=18) {
             System.out.println("Você é maior de idade!");
         } else {

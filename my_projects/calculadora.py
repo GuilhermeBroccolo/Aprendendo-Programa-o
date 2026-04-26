@@ -1,4 +1,5 @@
 #Aqui está a definição para cada operação matemática desejada.
+import time
 while True:
     print("Qual operação você deseja realizar?")
     print("S = Soma")
@@ -11,36 +12,37 @@ while True:
     operacao = input("Digite a operação correspondente: ")
 
     if operacao == 'SAIR':  
-        print("Programa encerrado.")
+        print("Encerrando Programa...\n")
+        time.sleep(1)
+        print("Programa encerrado.\n")
         break
 
     if operacao == 'S':
+        print("Você escolheu Soma")
         num1 = float(input("Digite o primeiro número:"))
         num2 = float(input("Digite o segundo número:"))
-        print("Você escolheu Soma")
 
     elif operacao == 'SB':
+        print("Você escolheu Subtração")
         num1 = float(input("DIgite o primeiro número:"))
         num2 = float(input("Digite o segundo número:"))
-        print("Você escolheu Subtração")
 
     elif operacao == 'M':
+        print("Você escolheu Multiplicação")
         num1 = float(input("Digite o primeiro número:"))
         num2 = float(input("Digite o segundo número:"))
-
-        print("Você escolheu Multiplicação")
 
     elif operacao == 'D':
+        print("Você escolheu Divisão")
         num1 = float(input("Digite o primeiro número:"))
         num2 = float(input("Digite o segundo número:"))
-        print("Você escolheu Divisão")
 
     elif operacao == 'R':
-        num1 = float(input("Digite o primeiro número:"))
         print("Você escolheu Raiz Quadrada")
+        num1 = float(input("Digite o primeiro número:"))
 
     else:
-        print("Operação inválida pelo sistema. Escolha uma operação válida.")
+        print("\n\033[31m Operação inválida pelo sistema. Escolha uma operação válida.\n\033[0m")
         continue
 
     if operacao == 'S':
@@ -64,7 +66,6 @@ while True:
         print(f"O resultado da operação {operacao} é: {resultado}")
     print("\n")  # Adiciona uma linha em branco para melhor legibilidade
     
-    import time
     time.sleep(2.5)  # Pausa de 2.5 segundos para melhor visualização
 
     print("Continuando o programa...\n")  # Mensagem de continuação do programa
